@@ -9,7 +9,8 @@ Clone this repo and then install globally:
 
 ```
 git clone https://github.com/CodeBaboon/fix-win-vulcanize.git
-npm install -g ./fix-win-vulcanize
+cd fix-win-vulcanize
+npm install -g .
 ```
 
 ## Options
@@ -22,7 +23,7 @@ npm install -g ./fix-win-vulcanize
 
 The easiest way to use this tool is to execute it from within the project that contains the installed vulcanize node module that you need modified:
 
-`node fix-win-vulcanize`
+`fix-win-vulcanize`
 
 By default it will look for the following path: `./node_modules/vulcanize/lib/pathresolver.js` and if it finds it the file will be modified appropriately and saved.
 
@@ -30,18 +31,18 @@ Using the options you can fully customize the path to the pathresolver file.
 
 The command
 
-`node fix-win-vulcanize -p ../../my/project/path`
+`fix-win-vulcanize -p ../../my/project/path`
 
 Will result in editing `../../my/project/path/node_modules/vulcanize/lib/pathresolver.js`.
 
 The command
 
-`node fix-win-vulcanize -p ../../my/project/path -v somehow/node_modules/are/here`
+`fix-win-vulcanize -p ../../my/project/path -v somehow/node_modules/are/here`
 
 Will result in editing `../../my/project/path/somehow/node_modules/are/here/lib/pathresolver.js`
 
 The command
 
-`node fix-win-vulcanize -p ../../my/project/path -v somehow/node_modules/are/here -r mycustomfile.js`
+`fix-win-vulcanize -p ../../my/project/path -v somehow/node_modules/are/here -r mycustomfile.js`
 
 Will result in editing `../../my/project/path/somehow/node_modules/are/here/mycustomfile.js`
